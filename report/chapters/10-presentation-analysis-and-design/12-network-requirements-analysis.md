@@ -35,12 +35,25 @@ La sede sucursal de Puno centraliza las operaciones en el sur del país. La sede
 
 ## 1.2.6 Requisitos Adicionales de la red
 
-Más allá del dimensionamiento de hosts por departamento, la solución técnica debe satisfacer un conjunto de requisitos funcionales y de arquitectura indispensables:
-- Arquitectura de red jerárquica y escalable: Adopción del modelo de tres capas para organizar el tráfico, facilitar el diagnóstico de incidencias y permitir la incorporación de nuevos módulos sin alterar la topología existente.
-- Segmentación lógica estricta mediante VLANs: Creación de redes virtuales independientes por unidad organizativa bajo el estándar IEEE 802.1Q para aislar dominios de difusión y optimizar el rendimiento de la conmutación.
-- Mitigación de vulnerabilidades de capa de enlace mediante VLAN nativa dedicada: Configuración de la VLAN 999 como red nativa en todos los enlaces troncales 802.1Q, manteniéndola desprovista de direccionamiento IP, interfaces virtuales de conmutador y puertos de acceso, neutralizando ataques de salto de VLAN y doble etiquetado.
-- Topología WAN Hub-and-Spoke con enrutamiento dinámico: Concentración del tráfico intersedes en Lima como nodo central mediante enlaces seriales punto a punto dedicados, empleando el protocolo dinámico RIPv2 para la convergencia interna y una ruta predeterminada estática hacia los proveedores de Internet.
-- Segregación inalámbrica segura bajo estándar WPA2: Habilitación de dos identificadores de conjunto de servicios por sede, uno para personal ejecutivo con acceso a recursos locales y otro exclusivo para clientes con salida directa a Internet sin visibilidad de la red empresarial.
-- Servicios de red distribuidos y centralizados: Despliegue de servidores FTP, HTTPS y DHCP locales en cada sede, manteniendo el servidor de correos y DNS centralizado en la sede Lima.
-- Gestión administrativa segura mediante segmento exclusivo y SSH versión 2: Confinamiento del plano de gestión hacia conmutadores y enrutadores dentro de la VLAN 99, restringiendo el acceso administrativo exclusivamente a sesiones cifradas bajo SSH versión 2 originadas desde la estación autorizada PC-Admin.
-- Continuidad operativa y copias de seguridad en la nube: Implementación de un mecanismo automatizado de respaldo offsite hacia un proveedor de nube pública, garantizando la recuperación de configuraciones y datos críticos ante desastres físicos.
+Más allá del dimensionamiento cuantitativo de hosts y computadoras por sede, el caso de estudio de MIEMPRESA establece un conjunto de requisitos técnicos, funcionales y de seguridad indispensables que la arquitectura de red debe cumplir obligatoriamente para satisfacer las demandas del negocio:
+
+### Requisitos de Tecnologías LAN y Redes Inalámbricas
+- **Segmentación por VLANs y enrutamiento inter-VLAN:** Cada sede debe segmentar el tráfico de sus departamentos en redes virtuales independientes, garantizando la comunicación entre distintas VLANs de la misma sede mediante conmutación multicapa y alta disponibilidad de puerta de enlace.
+- **Doble red WiFi por sede:** Cada sede debe contar con dos redes inalámbricas independientes: una red para Ejecutivos (con acceso a los recursos corporativos) y una red para Clientes e Invitados (con salida directa a Internet), ambas entregando direccionamiento automático por DHCP.
+- **Contención de enlaces troncales:** Confinamiento del tráfico de control mediante una VLAN nativa dedicada (VLAN 999) en todos los enlaces troncales 802.1Q, sin direccionamiento IP ni puertos de acceso, para mitigar vulnerabilidades de capa de enlace.
+
+### Requisitos de Conectividad WAN y Enrutamiento
+- **Enlaces WAN dedicados y estandarizados:** La comunicación entre la sede central en Lima y las cuatro sucursales remotas debe realizarse a través de enlaces seriales punto a punto mediante el protocolo PPP con autenticación segura (PAP y CHAP).
+- **Enrutamiento dinámico interno con RIPv2:** La red corporativa de Perú debe operar bajo el protocolo dinámico RIPv2 para mantener sincronizadas las tablas de rutas entre todas las sedes de forma automática.
+- **Contingencia de salida a Internet con doble ISP:** La sede Lima debe contar con dos enlaces hacia Internet, manteniendo activo el enlace primario (ISP1) y conmutando automáticamente al enlace secundario (ISP2) ante caídas de servicio.
+
+### Requisitos de Servicios de Red y Seguridad
+- **Políticas de acceso al servidor de archivos FTP:** Cada sede debe contar con un servidor FTP propio al que solo pueden acceder los usuarios de dicha sede y el servidor central de Lima. Queda restringido el acceso directo entre servidores FTP de diferentes sucursales (por ejemplo, Ica no puede acceder al FTP de La Libertad).
+- **Servidores Web locales y centralizados:** Cada sede debe disponer de un servidor Web local visible y accesible por cualquier usuario de la organización.
+- **Servicio DHCP distribuido por sede:** Cada sede debe implementar su propio servidor DHCP local para aprovisionar automáticamente de parámetros IP a los equipos cableados e inalámbricos.
+- **Servidor de correo centralizado:** La sede principal en Lima debe alojar el servidor corporativo de correos electrónicos para toda la empresa.
+- **Administración remota segura desde PC-Admin:** Todos los routers y switches deben ser gestionados de forma remota y cifrada exclusivamente mediante sesiones SSH originadas desde una computadora de administración autorizada (PC-Admin), ubicada dentro de la red virtual de gestión (VLAN 99) en cada sede.
+
+### Requisitos de Servicios Cloud y Continuidad del Negocio
+- **Solución de respaldo corporativo en la nube:** Dimensionar y costear una solución de almacenamiento remoto comparando proveedores reales del mercado (AWS, Azure y Google Cloud), garantizando la retención y recuperación de copias de seguridad de los datos críticos.
+- **Evaluación de migración a infraestructura Cloud:** Analizar la viabilidad técnica y económica de reemplazar la infraestructura física local por servicios equivalentes en la nube (VPC, routers virtuales y firewalls).

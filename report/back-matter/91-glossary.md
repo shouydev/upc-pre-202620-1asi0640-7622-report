@@ -1,6 +1,6 @@
 # Glosario
 
-El presente glosario recopila y define la terminología técnica, estándares internacionales, protocolos de comunicación y conceptos arquitectónicos empleados a lo largo del diseño, dimensionamiento e implementación de la infraestructura de red para la organización. Las definiciones se estructuran en orden alfabético para facilitar la consulta y unificar el marco conceptual de la solución técnica.
+El presente glosario recopila y define la terminología técnica, estándares internacionales, protocolos de comunicación y conceptos arquitectónicos empleados a lo largo del diseño, dimensionamiento e implementación de la infraestructura de red para la organización. Las definiciones se estructuran en orden alfabético para facilitar la consulta y unificar el marco conceptual de la solución técnica tanto en el ámbito de redes locales y conmutadas como en los enlaces de área amplia, servicios corporativos y contingencia en la nube.
 
 - **Access Control List (ACL):** Mecanismo de seguridad perimetral implementado en enrutadores y conmutadores multicapa que evalúa y filtra el tráfico de red mediante reglas secuenciales. Permite autorizar o denegar el paso de paquetes en función de criterios como la dirección IP de origen, la dirección de destino, el protocolo de capa de transporte y los puertos de comunicación, finalizando con una regla de denegación implícita.
 
@@ -34,6 +34,8 @@ El presente glosario recopila y define la terminología técnica, estándares in
 
 - **Conmutación Multicapa (Multilayer Switching):** Tecnología de interconexión implementada en conmutadores que integran funciones de conmutación de tramas de capa 2 y enrutamiento de paquetes de capa 3 a velocidad de hardware. Permite el reenvío directo de paquetes entre diferentes redes virtuales mediante circuitos integrados de aplicación específica, maximizando el rendimiento del enrutamiento inter-VLAN.
 
+- **Conmutador (Switch):** Dispositivo intermediario de capa de enlace de datos fundamental en la arquitectura de red local que reenvía tramas Ethernet de forma selectiva entre sus puertos físicos basándose en la inspección de direcciones MAC almacenadas en su tabla de conmutación. Previene colisiones, proporciona ancho de banda dedicado por puerto y segmenta dominios de colisión dentro de la infraestructura institucional.
+
 - **Copia de Seguridad Completa (Full Backup):** Mecanismo de respaldo que realiza una copia exacta e íntegra de la totalidad de los datos y configuraciones seleccionadas del sistema corporativo en un momento determinado. Constituye la línea base fundamental para los procesos de restauración, aunque exige mayor tiempo de ejecución y capacidad de almacenamiento en los repositorios de destino.
 
 - **Copia de Seguridad Diferencial (Differential Backup):** Estrategia de respaldo acumulativa que almacena únicamente los archivos modificados o creados desde la última copia de seguridad completa. Optimiza los tiempos de restauración al requerir únicamente la última copia completa y el último respaldo diferencial, manteniendo un equilibrio técnico entre velocidad de recuperación y espacio ocupado.
@@ -42,9 +44,13 @@ El presente glosario recopila y define la terminología técnica, estándares in
 
 - **Default Gateway (Puerta de Enlace Predeterminada):** Dirección IP configurada en los dispositivos finales que identifica la interfaz de red del enrutador o switch multicapa responsable de canalizar el tráfico hacia subredes externas o hacia Internet. En topologías de alta disponibilidad, corresponde a la dirección virtual compartida gestionada por protocolos de redundancia de primer salto.
 
+- **Doble ISP (Dual ISP Failover):** Estrategia de diseño de conectividad que proporciona redundancia de acceso a la red pública Internet mediante la contratación de dos proveedores de servicios independientes. El enrutador de borde canaliza el tráfico habitualmente a través del enlace primario y conmuta de forma automática hacia el enlace secundario ante la pérdida del servicio principal mediante el empleo de rutas estáticas flotantes.
+
 - **Domain Name System (DNS):** Sistema de base de datos distribuida y jerárquica encargado de resolver nombres de dominio textuales comprensibles para los usuarios en direcciones IP numéricas requeridas por la capa de red. En el ámbito corporativo, permite la localización transparente de servidores web, de correo y de archivos tanto a nivel local como en la red global.
 
 - **Dynamic Host Configuration Protocol (DHCP):** Protocolo cliente-servidor de capa de aplicación que automatiza la configuración de red de los terminales en un entorno de comunicación. Asigna dinámicamente direcciones IP, máscaras de subred, puertas de enlace predeterminadas y servidores de resolución de nombres a partir de grupos de direcciones definidos para cada segmento lógico de la organización.
+
+- **Enlace Serial:** Medio de transmisión físico de datos síncrono que transfiere información de forma secuencial bit a bit a través de una línea o canal de comunicaciones punto a punto. Es ampliamente utilizado en conexiones de área amplia para interconectar enrutadores remotos a través de líneas dedicadas mediante protocolos de línea como PPP.
 
 - **Enlace Troncal (Trunk Link):** Conexión física punto a punto establecida entre conmutadores o entre un conmutador y un enrutador que permite transportar el tráfico de múltiples redes virtuales sobre un único medio físico. Utiliza mecanismos de multiplexación y encapsulamiento normalizados para conservar el aislamiento del tráfico departamental a través del campus.
 
@@ -55,6 +61,8 @@ El presente glosario recopila y define la terminología técnica, estándares in
 - **Enrutamiento Inter-VLAN:** Proceso de reenvío de paquetes entre redes virtuales independientes que operan en diferentes subredes lógicas. Se implementa en la capa de red mediante interfaces virtuales en conmutadores multicapa o a través de subinterfaces enrutadas, permitiendo la comunicación controlada entre departamentos conforme a las políticas de seguridad corporativas.
 
 - **File Transfer Protocol (FTP):** Protocolo de capa de aplicación basado en el modelo cliente-servidor para la transferencia de archivos en redes TCP/IP. Utiliza conexiones separadas para control y transmisión de datos, facilitando el intercambio de documentos corporativos y respaldos de configuración bajo mecanismos de autenticación y privilegios de acceso.
+
+- **Firewall (Cortafuegos):** Sistema de seguridad perimetral de red implementado en hardware o software que inspecciona, filtra y controla el flujo de paquetes entrantes y salientes en función de un conjunto predeterminado de reglas de seguridad. Protege la infraestructura interna aislando segmentos de servidores y bloqueando intentos de acceso no autorizados desde redes externas.
 
 - **Fixed Length Subnet Mask (FLSM):** Metodología de subdivisión de redes donde todas las subredes derivadas de un bloque principal poseen una máscara con el mismo número de bits de prefijo, alojando idéntica cantidad de direcciones posibles. Es empleada para estructurar enlaces de área amplia o filiales homogéneas con requerimientos cuantitativos uniformes.
 
@@ -67,6 +75,8 @@ El presente glosario recopila y define la terminología técnica, estándares in
 - **IEEE 802.1Q:** Estándar internacional de la industria para el etiquetado de tramas Ethernet en enlaces troncales de conmutación. Inserta una cabecera de cuatro bytes en la trama original para incorporar un identificador numérico de red virtual de doce bits, lo que permite diferenciar y encaminar el tráfico de hasta 4094 VLANs sobre un único medio compartido.
 
 - **Infrastructure as a Service (IaaS):** Modelo de aprovisionamiento de computación en la nube que proporciona recursos informáticos fundamentales como procesamiento, almacenamiento y conectividad de red bajo demanda mediante virtualización. Permite prescindir de hardware físico para respaldos y servidores corporativos, delegando el mantenimiento del centro de datos en el proveedor externo.
+
+- **Internet Message Access Protocol (IMAP):** Protocolo de capa de aplicación estándar para la gestión y lectura de correo electrónico que opera en el puerto TCP 143 o puerto seguro TCP 993. A diferencia de esquemas de descarga local, mantiene los mensajes y carpetas sincronizados directamente en el servidor de correo, permitiendo el acceso coordinado desde múltiples terminales.
 
 - **Internet Service Provider (ISP):** Entidad u organización de telecomunicaciones que comercializa conectividad a Internet y servicios asociados a empresas y usuarios finales. En infraestructuras corporativas críticas, se contratan múltiples proveedores independientes para establecer esquemas de contingencia activa y respaldo ante interrupciones de servicio.
 
@@ -86,9 +96,11 @@ El presente glosario recopila y define la terminología técnica, estándares in
 
 - **Point-to-Point Protocol (PPP):** Protocolo de capa de enlace de datos ampliamente adoptado en telecomunicaciones para establecer conexiones directas y síncronas entre dos nodos de red en enlaces de área amplia. Soporta la encapsulación de múltiples protocolos de capa de red, negociación de parámetros de conexión y mecanismos de autenticación segura.
 
+- **Port Security:** Mecanismo de seguridad de capa de enlace configurado en las interfaces de conmutadores de acceso que restringe el ingreso de tráfico evaluando las direcciones MAC de los terminales conectados. Permite definir límites cuantitativos de dispositivos por puerto y programar acciones reactivas de bloqueo ante accesos no autorizados.
+
 - **PortFast:** Característica de optimización para conmutadores Ethernet que acelera la transición de un puerto de acceso directamente al estado de reenvío, omitiendo las fases intermedias de escucha y aprendizaje del protocolo de árbol de expansión. Diseñado exclusivamente para puertos terminales, previene retrasos de conectividad durante la negociación DHCP.
 
-- **Port Security:** Mecanismo de seguridad de capa de enlace configurado en las interfaces de conmutadores de acceso que restringe el ingreso de tráfico evaluando las direcciones MAC de los terminales conectados. Permite definir límites cuantitativos de dispositivos por puerto y programar acciones reactivas de bloqueo ante accesos no autorizados.
+- **Post Office Protocol Version 3 (POP3):** Protocolo cliente-servidor de capa de aplicación diseñado para recuperar mensajes de correo electrónico desde un servidor remoto hacia un cliente local a través del puerto TCP 110. Descarga los correos a la estación de trabajo y habitualmente los elimina del buzón del servidor, optimizando el espacio de almacenamiento centralizado.
 
 - **Recovery Point Objective (RPO):** Métrica de continuidad operativa que define la cantidad máxima tolerable de pérdida de datos medida en unidades de tiempo que la organización está dispuesta a asumir ante un desastre en sus sistemas de información. Determina la frecuencia con la que deben ejecutarse las copias de seguridad de las bases de datos corporativas.
 
@@ -97,6 +109,10 @@ El presente glosario recopila y define la terminología técnica, estándares in
 - **RFC 1918:** Estándar de la Internet Engineering Task Force que reserva rangos de direcciones IPv4 para uso exclusivo en redes corporativas privadas sin posibilidad de ser enrutadas en la Internet pública. Define los bloques 10.0.0.0/8, 172.16.0.0/12 y 192.168.0.0/16, garantizando la reutilización y conservación del espacio de direccionamiento global.
 
 - **Routing Information Protocol Version 2 (RIPv2):** Protocolo de enrutamiento dinámico interior basado en el algoritmo de vector de distancia que utiliza la cantidad de saltos como métrica para seleccionar la mejor ruta hacia un destino, con un límite máximo de 15 saltos. Admite máscaras de subred de longitud variable, difunde actualizaciones por multidifusión e incluye autenticación de mensajes.
+
+- **Ruta Estática Flotante (Floating Static Route):** Ruta estática de respaldo configurada con una distancia administrativa numéricamente superior a la de la ruta principal o la del protocolo de enrutamiento dinámico activo. Permanece inactiva y fuera de la tabla de enrutamiento mientras el enlace primario está operativo, instalándose de forma automática ante caídas de la conexión principal.
+
+- **Ruta por Defecto (Default Route):** Ruta estática comodín representada por una dirección y máscara de todos ceros que coincide con cualquier destino no especificado de forma explícita en la tabla de enrutamiento. Es configurada en los enrutadores de borde para dirigir todo el tráfico con destino externo hacia la puerta de enlace del proveedor de servicios de Internet.
 
 - **Secure Shell (SSH):** Protocolo criptográfico de capa de aplicación que facilita el acceso, control y administración remota de enrutadores, conmutadores y servidores a través de una sesión cifrada y autenticada. Sustituye las conexiones de texto plano vulnerables como Telnet mediante el uso de algoritmos de clave pública y cifrado simétrico en el puerto TCP 22.
 
@@ -117,6 +133,10 @@ El presente glosario recopila y define la terminología técnica, estándares in
 - **Virtual Local Area Network (VLAN):** Segmentación lógica de una red de conmutación física que agrupa estaciones de trabajo y dispositivos de red en dominios de difusión independientes sin importar su ubicación física en el campus. Mejora la seguridad interna, reduce la propagación de tramas de difusión y optimiza la administración técnica por departamentos organizacionales.
 
 - **Virtual Private Cloud (VPC):** Red virtual aislada y privada aprovisionada dentro del entorno de infraestructura compartida de un proveedor de servicios de computación en la nube. Permite a la empresa definir sus propios rangos de direccionamiento IP, subredes, tablas de enrutamiento y pasarelas de seguridad para albergar instancias y respaldos corporativos.
+
+- **VLAN de Gestión (Management VLAN):** Red virtual de área local aislada y dedicada exclusivamente al transporte del tráfico administrativo de control y mantenimiento de los dispositivos de red intermediarios. Alberga las interfaces virtuales de gestión de conmutadores y enrutadores junto con la estación de administración PC-Admin bajo estrictas políticas de acceso cifrado por SSH.
+
+- **VLAN Nativa (Native VLAN):** Red virtual específica configurada en los enlaces troncales bajo el estándar IEEE 802.1Q encargada de transportar las tramas Ethernet que transitan sin etiqueta de identificación de red. En esquemas de alta seguridad, se asigna a un identificador exclusivo como la VLAN 999 sin direccionamiento IP ni puertos de acceso para neutralizar ataques de salto de red.
 
 - **Wide Area Network (WAN):** Infraestructura de telecomunicaciones que interconecta redes de área local distribuidas en amplias zonas geográficas, como ciudades, regiones o países. Emplea enlaces dedicados de alta velocidad arrendados a operadores de telecomunicaciones para asegurar la comunicación fluida entre la sede central y sus diferentes sucursales remotas.
 
