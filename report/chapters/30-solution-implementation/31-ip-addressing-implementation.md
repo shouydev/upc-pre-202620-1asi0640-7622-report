@@ -1,4 +1,6 @@
-# 3.1 Implementación del direccionamiento IP
+# Capítulo 3: Implementación de la Solución
+
+## 3.1 Implementación del direccionamiento IP
 
 <!--
 ALCANCE:
@@ -10,7 +12,7 @@ En cada sección se deben incluir:
 2. Capturas de pantalla o salidas de consola donde se verifique la asignación correcta (ej. 'show ip interface brief', 'ipconfig /all').
 -->
 
-## 3.1.1 Sede Principal (Lima)
+### 3.1.1 Sede Principal (Lima)
 
 ### Scripts de configuración
 ```cisco
@@ -20,7 +22,7 @@ En cada sección se deben incluir:
 ### Verificación de conectividad y salidas de comandos
 [Capturas y comandos de verificación]
 
-## 3.1.2 Sede Sucursal 1 (La Libertad)
+### 3.1.2 Sede Sucursal 1 (La Libertad)
 
 ### Scripts de configuración
 [Scripts CLI]
@@ -28,7 +30,7 @@ En cada sección se deben incluir:
 ### Verificación de conectividad
 [Capturas de verificación]
 
-## 3.1.3 Sede Sucursal 2 (Ica)
+### 3.1.3 Sede Sucursal 2 (Ica)
 
 ### Scripts de configuración
 [Scripts CLI]
@@ -36,7 +38,7 @@ En cada sección se deben incluir:
 ### Verificación de conectividad
 [Capturas de verificación]
 
-## 3.1.4 Sede Sucursal 3 (Huánuco)
+### 3.1.4 Sede Sucursal 3 (Huánuco)
 
 ### Scripts de configuración
 [Scripts CLI]
@@ -44,7 +46,7 @@ En cada sección se deben incluir:
 ### Verificación de conectividad
 [Capturas de verificación]
 
-## 3.1.5 Sede Sucursal 4 (Puno)
+### 3.1.5 Sede Sucursal 4 (Puno)
 
 ### Scripts de configuración
 [Scripts CLI]

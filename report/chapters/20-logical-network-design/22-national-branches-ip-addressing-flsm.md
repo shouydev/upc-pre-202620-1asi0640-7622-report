@@ -1,4 +1,4 @@
-# 2.2 Esquema de direccionamiento IP para todas las sedes (FLSM)
+## 2.2 Esquema de direccionamiento IP para todas las sedes (FLSM)
 
 <!--
 HITO 1 (Semana 7) - OBLIGATORIO

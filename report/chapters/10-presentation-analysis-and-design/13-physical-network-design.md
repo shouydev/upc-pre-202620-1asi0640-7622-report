@@ -1,6 +1,6 @@
-# 1.3 Diseño físico de la nueva red
+## 1.3 Diseño físico de la nueva red
 
-## 1.3.1 Diseño de la topología WAN
+### 1.3.1 Diseño de la topología WAN
 
 <!--
 Descripción y diagrama de la topología física y lógica WAN:
@@ -12,7 +12,7 @@ Descripción y diagrama de la topología física y lógica WAN:
 
 [Contenido y diagramas de la topología WAN]
 
-## 1.3.2 Diseño de la topología LAN
+### 1.3.2 Diseño de la topología LAN
 
 <!--
 Descripción y diagramas del diseño físico y lógico LAN:

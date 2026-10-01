@@ -1,4 +1,4 @@
-# 3.4 Implementación de Enrutamiento dinámico y estático
+## 3.4 Implementación de Enrutamiento dinámico y estático
 
 <!--
 HITO 2 (Semana 15) - ALCANCE WAN Y SALIDA A INTERNET
@@ -9,7 +9,7 @@ Detallar:
 4. Verificación de tablas de enrutamiento ('show ip route', 'show ip protocols') y pruebas de conectividad inter-sedes.
 -->
 
-## 3.4.1 Implementación de enrutamiento estático
+### 3.4.1 Implementación de enrutamiento estático
 
 ### Scripts de configuración (Ruta por defecto e ISP)
 ```cisco
@@ -19,7 +19,7 @@ Detallar:
 ### Verificación de enrutamiento estático
 [Capturas de consola y tablas de rutas]
 
-## 3.4.2 Implementación de enrutamiento dinámico (RIPv2)
+### 3.4.2 Implementación de enrutamiento dinámico (RIPv2)
 
 ### Scripts de configuración RIPv2
 ```cisco

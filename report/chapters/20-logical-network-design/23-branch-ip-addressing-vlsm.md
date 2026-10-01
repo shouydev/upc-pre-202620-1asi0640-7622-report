@@ -1,11 +1,11 @@
-# 2.3 Esquema de direccionamiento IP para cada sede (VLSM)
+## 2.3 Esquema de direccionamiento IP para cada sede (VLSM)
 
 <!--
 HITO 1 (Semana 7) - OBLIGATORIO
 Aplicación de Máscara de Subred de Longitud Variable (VLSM) dentro de cada sede, considerando la proyección de crecimiento del 25% a 10 años:
 -->
 
-## 2.3.1 Sede Principal (Lima)
+### 2.3.1 Sede Principal (Lima)
 
 <!--
 Cálculo VLSM ordenado de mayor a menor número de hosts requeridos:
@@ -23,7 +23,7 @@ Tabla VLSM detallada: VLAN, Departamento, Hosts Requeridos, Hosts Asignados, Dir
 
 [Contenido y tabla VLSM Sede Lima]
 
-## 2.3.2 Sede Sucursal 1 (La Libertad)
+### 2.3.2 Sede Sucursal 1 (La Libertad)
 
 <!--
 Cálculo VLSM para La Libertad:
@@ -32,7 +32,7 @@ Cálculo VLSM para La Libertad:
 
 [Contenido y tabla VLSM Sede La Libertad]
 
-## 2.3.3 Sede Sucursal 2 (Ica)
+### 2.3.3 Sede Sucursal 2 (Ica)
 
 <!--
 Cálculo VLSM para Ica:
@@ -41,7 +41,7 @@ Cálculo VLSM para Ica:
 
 [Contenido y tabla VLSM Sede Ica]
 
-## 2.3.4 Sede Sucursal 3 (Huánuco)
+### 2.3.4 Sede Sucursal 3 (Huánuco)
 
 <!--
 Cálculo VLSM para Huánuco:
@@ -50,7 +50,7 @@ Cálculo VLSM para Huánuco:
 
 [Contenido y tabla VLSM Sede Huánuco]
 
-## 2.3.5 Sede Sucursal 4 (Puno)
+### 2.3.5 Sede Sucursal 4 (Puno)
 
 <!--
 Cálculo VLSM para Puno:

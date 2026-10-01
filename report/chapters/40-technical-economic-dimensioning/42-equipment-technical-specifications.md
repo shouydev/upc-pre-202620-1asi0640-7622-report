@@ -1,4 +1,4 @@
-# 4.2 Especificaciones técnicas de los equipos de la solución
+## 4.2 Especificaciones técnicas de los equipos de la solución
 
 <!--
 Fichas técnicas y justificación de selección para cada modelo de dispositivo utilizado en la solución:

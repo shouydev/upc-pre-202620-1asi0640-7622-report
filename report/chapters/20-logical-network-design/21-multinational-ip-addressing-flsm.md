@@ -1,4 +1,6 @@
-# 2.1 Esquema de direccionamiento IP para todas las Filiales de la Multinacional (FLSM)
+# Capítulo 2: Diseño Lógico de la Red
+
+## 2.1 Esquema de direccionamiento IP para todas las Filiales de la Multinacional (FLSM)
 
 <!--
 HITO 1 (Semana 7) - OBLIGATORIO

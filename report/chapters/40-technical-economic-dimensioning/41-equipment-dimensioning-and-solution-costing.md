@@ -1,4 +1,6 @@
-# 4.1 Dimensionamiento de los equipos y valorización de la solución
+# Capítulo 4: Dimensionamiento Técnico Económico de la solución
+
+## 4.1 Dimensionamiento de los equipos y valorización de la solución
 
 <!--
 ALCANCE:

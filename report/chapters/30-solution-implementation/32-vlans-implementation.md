@@ -1,4 +1,4 @@
-# 3.2 Implementación de VLANs
+## 3.2 Implementación de VLANs
 
 <!--
 HITO 1 (Semana 7) - OBLIGATORIO
@@ -10,7 +10,7 @@ Detallar:
 5. Salidas de verificación: 'show vlan brief', 'show interfaces trunk'.
 -->
 
-## 3.2.1 Sede Principal (Lima)
+### 3.2.1 Sede Principal (Lima)
 
 ### Scripts de implementación de VLANs y Trunks
 ```cisco
@@ -20,7 +20,7 @@ Detallar:
 ### Verificación de VLANs y enlaces troncales
 [Capturas de comandos 'show vlan brief' y 'show interfaces trunk']
 
-## 3.2.2 Sedes Sucursales (La Libertad, Ica, Huánuco, Puno)
+### 3.2.2 Sedes Sucursales (La Libertad, Ica, Huánuco, Puno)
 
 ### Scripts de implementación de VLANs y Trunks
 [Scripts CLI]

@@ -1,4 +1,4 @@
-# 5.6 Selección y conclusión de la solución Cloud
+## 5.6 Selección y conclusión de la solución Cloud
 
 <!--
 ALCANCE:
